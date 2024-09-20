@@ -1,12 +1,12 @@
 word_list = [
-    "maçã", "livro", "gato", "cão", "elefante",
-    "flor", "violão", "casa", "gelo", "casaco",
-    "pipa", "limão", "montanha", "caderno", "oceano",
-    "lápis", "rainha", "rio", "sol", "árvore",
+    "maca", "livro", "gato", "cao", "elefante",
+    "flor", "violao", "casa", "gelo", "casaco",
+    "pipa", "limao", "montanha", "caderno", "oceano",
+    "lapis", "rainha", "rio", "sol", "arvore",
     "guarda-chuva", "violino", "janela", "xilofone", "amarelo",
-    "zebra", "avião", "balão", "computador", "golfinho",
-    "águia", "sapo", "girafa", "hambúrguer", "ilha",
+    "zebra", "aviao", "balao", "computador", "golfinho",
+    "aguia", "sapo", "girafa", "hamburguer", "ilha",
     "geleia", "canguru", "farol", "lua", "ninho",
-    "laranja", "piano", "colcha", "arco-íris", "estrela",
-    "telescópio", "unicórnio", "vulcão", "cachoeira", "iogurte"
+    "laranja", "piano", "colcha", "arco-iris", "estrela",
+    "telescopio", "unicornio", "vulcao", "cachoeira", "iogurte"
 ]
