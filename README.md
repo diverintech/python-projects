@@ -21,3 +21,7 @@ This Python program is a simple calculator that allows users to perform basic ar
 ## [5. Calculator Program](./05.%20Quiz%20Game)
 
 This Python quiz game allows users to answer True/False questions from categories like General Knowledge and Science, with questions sourced from [the Open Trivia Database](https://opentdb.com/). Players can track their scores and exit the game anytime by typing 'q'.
+
+## [6. Turtle Race](./05.%20Turtle%20Race)
+This project is a simple turtle race game where users can bet on which turtle will win. The turtles are dynamically positioned and race across the screen in random increments.
+For more information on the Turtle library, visit the official documentation [here](https://docs.python.org/3/library/turtle.html#module-turtle).
