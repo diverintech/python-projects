@@ -18,6 +18,10 @@ The Caesar Cipher is a simple encryption technique that shifts the letters of th
 
 This Python program is a simple calculator that allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) between two numbers and continue calculating with the result until the user chooses to exit.
 
-## [5. Calculator Program](./05.%20Quiz%20Game)
+## [5. Quiz Game](./05.%20Quiz%20Game)
 
 This Python quiz game allows users to answer True/False questions from categories like General Knowledge and Science, with questions sourced from [the Open Trivia Database](https://opentdb.com/). Players can track their scores and exit the game anytime by typing 'q'.
+
+## [6. Turtle Race](./05.%20Turtle%20Race)
+This project is a simple turtle race game where users can bet on which turtle will win. The turtles are dynamically positioned and race across the screen in random increments.
+For more information on the Turtle library, visit the official documentation [Tutle Library](https://docs.python.org/3/library/turtle.html#module-turtle).
