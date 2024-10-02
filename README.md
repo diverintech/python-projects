@@ -24,4 +24,4 @@ This Python quiz game allows users to answer True/False questions from categorie
 
 ## [6. Turtle Race](./05.%20Turtle%20Race)
 This project is a simple turtle race game where users can bet on which turtle will win. The turtles are dynamically positioned and race across the screen in random increments.
-For more information on the Turtle library, visit the official documentation [here](https://docs.python.org/3/library/turtle.html#module-turtle).
+For more information on the Turtle library, visit the official documentation [Tutle Library](https://docs.python.org/3/library/turtle.html#module-turtle).
