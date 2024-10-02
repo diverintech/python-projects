@@ -1,38 +1,80 @@
 from turtle import Turtle, Screen
 import random
 
-is_race_on = False
-screen = Screen()
-screen.setup(width=500, height=400)
-user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter a color: ")
+# Constants
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
-y_positions = [-70, -40, -10, 20, 50, 80]
-all_turtles = []
+screen_height = 400
+screen_width = 500
+x_start_position = -230
+x_end_position = 230
 
-#Create 6 turtles
-for turtle_index in range(0, 6):
-    new_turtle = Turtle(shape="turtle")
-    new_turtle.penup()
-    new_turtle.color(colors[turtle_index])
-    new_turtle.goto(x=-230, y=y_positions[turtle_index])
-    all_turtles.append(new_turtle)
 
-if user_bet:
+# Calculate dynamic Y positions based on number of turtles and screen height
+def calculate_y_positions(num_turtles, screen_height):
+    spacing = screen_height // (num_turtles + 1)  # Divide space by number of turtles + 1 (for padding)
+    y_positions = [(-screen_height // 2 + spacing * (i + 1)) for i in range(num_turtles)]
+    return y_positions
+
+
+# Screen setup
+def setup_screen():
+    screen = Screen()
+    screen.setup(width=screen_width, height=screen_height)
+    return screen
+
+
+# Create turtles based on colors and dynamic positions
+def create_turtles(y_positions):
+    turtles = []
+    for index in range(len(colors)):
+        turtle = Turtle(shape="turtle")
+        turtle.shapesize(1, 1, 5)
+        turtle.penup()
+        turtle.color(colors[index])
+        turtle.goto(x=x_start_position, y=y_positions[index])
+        turtles.append(turtle)
+    return turtles
+
+
+# Get user bet and validate it
+def get_user_bet(screen):
+    while True:
+        user_bet = screen.textinput(title="Make your bet",
+                                    prompt=f"Which turtle will win the race? Choose from {', '.join(colors)}: ")
+        if user_bet in colors:
+            return user_bet
+        print("Invalid color! Please choose a valid color.")
+
+
+# Start the race
+def start_race(turtles, user_bet):
     is_race_on = True
+    while is_race_on:
+        for turtle in turtles:
+            if turtle.xcor() > x_end_position:
+                is_race_on = False
+                winning_color = turtle.pencolor()
+                if winning_color == user_bet:
+                    print(f"You've won! The {winning_color} turtle is the winner!")
+                else:
+                    print(f"You've lost! The {winning_color} turtle is the winner!")
+                break
+            rand_distance = random.randint(0, 10)
+            turtle.forward(rand_distance)
 
-while is_race_on:
-    for turtle in all_turtles:
-        #230 is 250 - half the width of the turtle.
-        if turtle.xcor() > 230:
-            is_race_on = False
-            winning_color = turtle.pencolor()
-            if winning_color == user_bet:
-                print(f"You've won! The {winning_color} turtle is the winner!")
-            else:
-                print(f"You've lost! The {winning_color} turtle is the winner!")
 
-        #Make each turtle move a random amount.
-        rand_distance = random.randint(0, 10)
-        turtle.forward(rand_distance)
+# Main game function
+def main():
+    screen = setup_screen()
 
-screen.exitonclick()
+    # Dynamically calculate Y positions based on number of turtles and screen height
+    y_positions = calculate_y_positions(num_turtles=len(colors), screen_height=screen_height)
+
+    turtles = create_turtles(y_positions)
+    user_bet = get_user_bet(screen)
+    start_race(turtles, user_bet)
+    screen.exitonclick()
+
+
+if __name__ == "__main__":
+    main()
