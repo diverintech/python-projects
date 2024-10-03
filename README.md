@@ -25,8 +25,8 @@ A simple calculator that performs basic arithmetic operations.
 ## [5. Quiz Game](./05.%20Quiz%20Game)  
 A quiz game that tests your knowledge with multiple-choice questions.
 
-## [6. Turtle Race](./06.%20Turtle%20Race)  
+## [6. Turtle Race](./06.%20Turtles%20Race)  
 A fun turtle race simulation using the Turtle graphics library.
 
-## [7. US States Game](./07.%20US%20States%20Race)  
+## [7. US States Game](./07.%20US%20States%20Game)
 An interactive game where players guess the names of the U.S. states.
