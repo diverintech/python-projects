@@ -6,3 +6,7 @@ __pycache__/
 
 # Ignore webstorm config
 .idea/
+
+# Ignore game-generated CSV files for US States Game
+07.US States Game/guessed_states.csv
+07.US States Game/states_to_learn.csv

@@ -30,6 +30,8 @@ def get_user_answer():
         # Check if the user pressed 'Cancel'
         if user_answer is None:
             print("Game exited by user.")
+            save_unlearned_states()  # Save states the user didn't guess
+            save_guessed_states()  # Save states the user guessed
             return  # Exit the function if the user cancels the input
 
         user_answer = user_answer.title()
@@ -54,6 +56,8 @@ def get_user_answer():
 
     # Display final message
     screen.textinput(title="Congratulations!", prompt="You've guessed all 50 states! Press OK to exit.")
+    save_unlearned_states()  # Save states the user didn't guess
+    save_guessed_states()  # Save states the user guessed
 
 def get_closest_state(user_answer):
     closest_match = difflib.get_close_matches(user_answer, all_states, n=1, cutoff=0.6)
@@ -69,6 +73,19 @@ def display_state_on_map(state_name):
     state_data = data_states[data_states.state == state_name]
     t.goto(state_data.x.item(), state_data.y.item())
     t.write(state_name)
+
+# Function to save unlearned states to a CSV file
+def save_unlearned_states():
+    missing_states = [state for state in all_states if state not in guessed_states]
+    new_data = pandas.DataFrame(missing_states, columns=["State"])
+    new_data.to_csv("states_to_learn.csv", index=False)
+    print("States to learn saved to states_to_learn.csv")
+
+# Function to save guessed states to a CSV file
+def save_guessed_states():
+    guessed_data = pandas.DataFrame(guessed_states, columns=["State"])
+    guessed_data.to_csv("guessed_states.csv", index=False)
+    print("Guessed states saved to guessed_states.csv")
 
 # Main
 get_user_answer()
