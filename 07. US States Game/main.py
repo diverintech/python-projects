@@ -38,13 +38,15 @@ def get_user_answer():
             feedback = f"You've already guessed {user_answer}!"
         elif user_answer in all_states:
             guessed_states.append(user_answer)
-            feedback = f"Well Done! You guessed {user_answer}!"
+            feedback = "Well Done!"
+            display_state_on_map(user_answer)  # Call function to display the state on the map
         elif get_closest_state(user_answer):
             closest_state = get_closest_state(user_answer)
             confirm = screen.textinput(title="Did you mean this?", prompt=f"Did you mean {closest_state}? (yes/no)").lower()
             if confirm == "yes" and closest_state not in guessed_states:
                 guessed_states.append(closest_state)
-                feedback = f"Well Done! You guessed {closest_state}!"
+                feedback = "Well Done!"
+                display_state_on_map(closest_state)  # Call function to display the state on the map
             else:
                 feedback = "Try again."
         else:
@@ -58,6 +60,15 @@ def get_closest_state(user_answer):
     if closest_match:
         return closest_match[0]
     return None
+
+# New function to display the guessed state on the map
+def display_state_on_map(state_name):
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.penup()
+    state_data = data_states[data_states.state == state_name]
+    t.goto(state_data.x.item(), state_data.y.item())
+    t.write(state_name)
 
 # Main
 get_user_answer()
