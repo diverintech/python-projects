@@ -8,5 +8,5 @@ __pycache__/
 .idea/
 
 # Ignore game-generated CSV files for US States Game
-07.US States Game/guessed_states.csv
-07.US States Game/states_to_learn.csv
+07.%20US%20States%20Game/guessed_states.csv
+07.%20US%20States%20Game/states_to_learn.csv
