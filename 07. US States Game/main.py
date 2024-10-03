@@ -45,12 +45,17 @@ def get_user_answer():
         elif get_closest_state(user_answer):
             closest_state = get_closest_state(user_answer)
             confirm = screen.textinput(title="Did you mean this?", prompt=f"Did you mean {closest_state}? (yes/no)").lower()
-            if confirm == "yes" and closest_state not in guessed_states:
-                guessed_states.append(closest_state)
-                feedback = "Well Done!"
-                display_state_on_map(closest_state)  # Call function to display the state on the map
+
+            if confirm == "yes":
+                if closest_state in guessed_states:
+                    feedback = f"You've already guessed {closest_state}!"  # Feedback caso o estado já tenha sido adivinhado
+                else:
+                    guessed_states.append(closest_state)
+                    feedback = "Well Done!"
+                    display_state_on_map(closest_state)  # Exibe o estado no mapa
             else:
                 feedback = "Try again."
+
         else:
             feedback = "Incorrect guess, try again."
 
