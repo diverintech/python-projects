@@ -48,11 +48,11 @@ def get_user_answer():
 
             if confirm == "yes":
                 if closest_state in guessed_states:
-                    feedback = f"You've already guessed {closest_state}!"  # Feedback caso o estado já tenha sido adivinhado
+                    feedback = f"You've already guessed {closest_state}!"
                 else:
                     guessed_states.append(closest_state)
                     feedback = "Well Done!"
-                    display_state_on_map(closest_state)  # Exibe o estado no mapa
+                    display_state_on_map(closest_state)
             else:
                 feedback = "Try again."
 
