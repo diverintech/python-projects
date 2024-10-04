@@ -1,4 +1,3 @@
-
 # U.S. States Game
 
 ## Description
@@ -27,49 +26,14 @@ The U.S. States Game is an interactive Python game where players can test their 
   - `pandas`
   - `turtle` (this comes with Python but may need additional configuration in some environments).
 
-## How to Set Up the Project in PyCharm
+## Problem and Solution for Running the Project in Visual Studio Code
 
-1. **Download and Install PyCharm**: If you haven't already, download and install [PyCharm](https://www.jetbrains.com/pycharm/download/).
+If you are facing issues running the project on VS Code, add the following lines to your `settings.json` file:
 
-2. **Create a New Project**:
-   - Open PyCharm and create a new project by navigating to **File** > **New Project**.
-   - Choose a location for the project and select the option to create a new virtual environment (**Virtualenv**).
+```json
+"python.envFile": "${workspaceFolder}/.env",
+"python.terminal.executeInFileDir": true
 
-3. **Install Required Packages**:
-   - Open the terminal in PyCharm and run the following commands to install the necessary packages:
-     ```bash
-     pip install pandas
-     ```
-   - The `turtle` package comes with Python, but if you encounter errors, you may need to configure your environment to support it.
-
-4. **Add Required Files**:
-   - Ensure that the following files are in your project directory:
-     - `50_states.csv`: This CSV file should contain the list of U.S. states with corresponding coordinates for displaying them on the map.
-     - `blank_states_img.gif`: This is the map of the United States that will be displayed in the game.
-
-5. **Run the Game**:
-   - After setting up everything, open the `main.py` file and click **Run** to start the game.
-   - The game window will open, displaying the U.S. map. You will be prompted to guess the names of states.
-
-6. **Game Instructions**:
-   - The goal of the game is to guess all 50 states.
-   - Enter the name of a state when prompted. If the state is correct, its name will be displayed on the map.
-   - If your guess is incorrect, the game may suggest a similar state name to help you.
-   - When you finish, states you missed will be saved in `states_to_learn.csv`, and states you've guessed correctly will be saved in `guessed_states.csv`.
-
-## Project Structure
-
-Ensure that the project folder contains the following files:
-
-```
-U.S. States Game/
-│
-├── main.py
-├── 50_states.csv
-├── blank_states_img.gif
-├── guessed_states.csv (generated after playing the game)
-└── states_to_learn.csv (generated after playing the game)
-```
 
 ## How to Play
 
@@ -81,3 +45,4 @@ U.S. States Game/
 ## License
 
 This project is for educational purposes and is open to modification and use as needed.
+```
