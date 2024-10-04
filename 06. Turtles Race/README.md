@@ -26,4 +26,4 @@ This project features a simple turtle racing game implemented in Python using th
 - As the project grows, breaking it into modular components improves organization and makes future enhancements more manageable.
 
 ## Turtle Library Documentation
-For more information on the Turtle library, visit the official documentation [here](https://docs.python.org/3/library/turtle.html#module-turtle).
+For more information on the Turtle library, visit the official documentation [Tutle Library](https://docs.python.org/3/library/turtle.html#module-turtle).

@@ -1,27 +1,32 @@
 # Python Mini-Projects
 
+## Overview
+
+This repository contains a collection of mini projects developed in Python. 
+Each project is designed to explore different concepts and features of the language. 
+Below is a list of the projects included in this repository.
+
+## Projects
+
 This repository contains a collection of mini-projects implemented in Python.
 
-## [1. Rock Paper Scissors](./01.%20Rock%20Paper%20Scissors)
+## [1. Rock Paper Scissors](./01.%20Rock%20Paper%20Scissors)  
+A classic game where players choose rock, paper, or scissors and see who wins.
 
-A classic game implemented in Python where the player competes against the computer in the timeless game of Rock Paper Scissors.
+## [2. Hangman](./02.%20Hangman)  
+A word-guessing game where players try to guess a hidden word before running out of attempts.
 
-## [2. Hangman](./02.%20Hangman)
+## [3. Caesar Cipher](./03.%20Caesar%20Cipher)  
+An implementation of the Caesar cipher encryption technique.
 
-An interactive word-guessing game where the player tries to guess a hidden word letter by letter before running out of attempts.
+## [4. Calculator Program](./04.%20Calculator)  
+A simple calculator that performs basic arithmetic operations.
 
-## [3. Caesar Cipher](./03.%20Caesar%20Cipher)
+## [5. Quiz Game](./05.%20Quiz%20Game)  
+A quiz game that tests your knowledge with multiple-choice questions.
 
-The Caesar Cipher is a simple encryption technique that shifts the letters of the alphabet by a fixed number of positions. This project allows users to encode and decode messages using this classic cipher method. The program prompts the user for a message and a shift value, then applies the cipher to transform the text accordingly. Users can choose to encrypt or decrypt their messages, making it an engaging way to explore basic concepts of cryptography.
+## [6. Turtle Race](./06.%20Turtles%20Race)  
+A fun turtle race simulation using the Turtle graphics library.
 
-## [4. Calculator Program](./04.%20Calculator)
-
-This Python program is a simple calculator that allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) between two numbers and continue calculating with the result until the user chooses to exit.
-
-## [5. Quiz Game](./05.%20Quiz%20Game)
-
-This Python quiz game allows users to answer True/False questions from categories like General Knowledge and Science, with questions sourced from [the Open Trivia Database](https://opentdb.com/). Players can track their scores and exit the game anytime by typing 'q'.
-
-## [6. Turtle Race](./05.%20Turtle%20Race)
-This project is a simple turtle race game where users can bet on which turtle will win. The turtles are dynamically positioned and race across the screen in random increments.
-For more information on the Turtle library, visit the official documentation [Tutle Library](https://docs.python.org/3/library/turtle.html#module-turtle).
+## [7. US States Game](./07.%20US%20States%20Game)
+An interactive game where players guess the names of the U.S. states.
