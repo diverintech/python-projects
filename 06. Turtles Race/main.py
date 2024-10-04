@@ -16,9 +16,12 @@ def main():
 
     turtles = create_turtles(y_positions)
     user_bet = get_user_bet(screen, colors)
-    start_race(turtles, user_bet, x_end_position)
-    screen.exitonclick()
 
+    if user_bet is not None:
+        start_race(turtles, user_bet, x_end_position)
+        screen.exitonclick()
+    else:
+        screen.bye()
 
 if __name__ == "__main__":
     main()

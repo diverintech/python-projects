@@ -5,9 +5,14 @@ def get_user_bet(screen, colors):
     while True:
         user_bet = screen.textinput(title="Make your bet",
                                     prompt=f"Which turtle will win the race? Choose from {', '.join(colors)}: ")
+        if user_bet is None:
+            print("See you next time!")
+            return None
         if user_bet in colors:
             return user_bet
-        print("Invalid color! Please choose a valid color.")
+        else:
+            screen.textinput(title="Invalid color",
+                             prompt=f"Invalid color! Please choose a valid color from {', '.join(colors)}.")
 
 # Start the race
 def start_race(turtles, user_bet, x_end_position):
