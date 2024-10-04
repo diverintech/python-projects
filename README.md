@@ -6,6 +6,10 @@ This repository contains a collection of mini projects developed in Python.
 Each project is designed to explore different concepts and features of the language. 
 Below is a list of the projects included in this repository.
 
+## Acknowledgments
+
+These mini-projects are based on the course [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/) by Angela Yu. 
+
 ## Projects
 
 This repository contains a collection of mini-projects implemented in Python.
