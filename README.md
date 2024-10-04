@@ -8,7 +8,7 @@ Below is a list of the projects included in this repository.
 
 ## Acknowledgments
 
-These mini-projects are based on the course [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/) by Angela Yu. 
+These mini-projects are based on the course [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/) by [@angelabauer](https://github.com/angelabauer). 
 
 ## Projects
 
